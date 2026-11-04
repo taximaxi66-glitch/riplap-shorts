@@ -37,7 +37,9 @@ Every new episode must look, move and sound like **Part 3 – The Pale Stretcher
 - Every pop-up (RULE card, option chips, checklist, X, CTA) appears on its exact word and stays fully inside the frame (x 60-1020, y 150-1650). Keep clear of the caption zone.
 
 ## Sound
-- Beautiful creepy ambient music bed (drone + slow minor pads + sparse music-box bells + wind), warmer when the danger is over. Ducked under the voice.
+- Music must stay **exciting and creepy the whole time** and be **clearly audible**: in Part 3 it was too quiet and unobtrusive next to the voice (owner feedback). The sound effects in Part 3 were good, keep them as they are.
+- Music bed = creepy ambient (drone + slow minor pads + sparse music-box bells + wind) PLUS a tension layer (stalking low pulse, dissonant tremolo strings, a riser into every scare). Warmer only when the danger is over, dark again for the teaser at the end.
+- Level: music about 6-8 dB under the voice in pauses, only lightly ducked under speech (engine/mix.py: music gain 0.2, duck 0.3). Never let it disappear; never let it cover the voice.
 - Lots of sound effects, every one synced to the picture via cue() in shots.js: whooshes on transitions, footsteps on each foot strike, impacts, glass, stings on reveals, heartbeat in the hiding part, pops for text.
 - Balanced: voice clearly on top; effects neither too loud nor too quiet; final loudness -14 LUFS.
 - Narrator (Kokoro `am_fenrir`) not monotone: slower speed on tense lines, short dramatic pauses (gap) at quiet scary moments so the picture works.

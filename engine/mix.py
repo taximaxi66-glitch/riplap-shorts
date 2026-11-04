@@ -133,20 +133,35 @@ def music():
     # crickets at night
     cr = np.sin(2 * np.pi * 4800 * t) * (np.sin(2 * np.pi * 30 * t) > 0.6) * (np.sin(2 * np.pi * 0.8 * t) > 0) * 0.008
     out += cr * (1 - dk)
+    # --- tension layer: stalking low pulse + tremolo strings + risers into every scare cue ---
+    night = 1 - dk
+    pulse = np.zeros(N); per = 60 / 76
+    for k in range(int(DUR / per)):
+        a = int(k * per * SR); tt = t_(0.5); b = np.sin(2 * np.pi * 46 * tt) * np.exp(-tt / 0.12) * (1.0 if k % 2 == 0 else 0.55); pulse[a:a + len(b)] += b[:N - a]
+    out += lp(pulse, 200) * 0.45 * night
+    trem = np.zeros(N)
+    for f in (293.7, 311.1, 440.0):   # dissonant cluster, slow tremolo
+        trem += lp(2 * ((f * t) % 1) - 1, 1800) * (0.6 + 0.4 * np.sin(2 * np.pi * 6.5 * t))
+    swell = 0.5 + 0.5 * np.sin(2 * np.pi * t / 11.0 - 1.2)
+    out += trem * 0.05 * swell * night
+    for c in CUES:   # 1.5 s riser into stings / scary hits
+        if c['n'] in ('sting', 'scream', 'hit', 'glass', 'impact'):
+            b = int(c['t'] * SR); a = max(0, b - int(1.5 * SR)); n = b - a; tt = np.arange(n) / SR
+            if n > 0: out[a:b] += bp(rs.randn(n), 400, 3000) * (tt / 1.5) ** 2.5 * 0.35 + np.sin(2 * np.pi * np.cumsum(180 + 500 * (tt / 1.5) ** 2) / SR) * (tt / 1.5) ** 3 * 0.12
     return out
 
 voice_sr, v = wavfile.read('data/narration.wav'); v = v.astype(np.float64) / 32768
 vi = np.interp(np.arange(int(len(v) * SR / voice_sr)) / SR, np.arange(len(v)) / voice_sr, v); voice = pad(vi, N)
 mus = music()
 # duck music under voice
-ve = np.abs(voice); ve = np.convolve(ve, np.ones(int(0.2 * SR)) / (0.2 * SR), 'same'); duck = 1 - 0.45 * np.clip(ve / 0.08, 0, 1)
+ve = np.abs(voice); ve = np.convolve(ve, np.ones(int(0.2 * SR)) / (0.2 * SR), 'same'); duck = 1 - 0.3 * np.clip(ve / 0.08, 0, 1)
 fx = np.zeros(N + 10 * SR)
 VOL = {'tick': 0.6, 'whoosh': 1.1, 'scream': 0.3, 'glass': 0.6, 'impact': 0.3, 'hit': 0.32, 'sputter': 0.28, 'heartbeat': 1.1, 'barefoot': 0.85, 'tap': 1.2, 'sting': 0.6, 'boom': 0.4, 'step': 1.2, 'birds': 1.3, 'creak': 4.0, 'twitch': 1.2, 'lockclick': 1.1, 'switch': 1.1, 'cloth': 1.0, 'slide': 1.0, 'swing': 1.0, 'xstamp': 0.4, 'grab': 0.5, 'breathstop': 0.9, 'bonecrack': 0.8}
 for c in CUES:
     s = FX[c['n']](); a = int(c['t'] * SR); fx[a:a + len(s)] += s * c['v'] * VOL.get(c['n'], 0.5)
 fx = fx[:N]
 # extra heartbeat bed through the tense hiding part
-mix = voice * 1.0 + mus * duck * 0.12 + fx * 0.8
+mix = voice * 1.0 + mus * duck * 0.2 + fx * 0.8   # music clearly audible (owner: Part 3 music was too quiet)
 mix = np.stack([mix, mix], 1)
 mix[:, 0] += np.roll(fx, 200) * 0.05; mix /= np.abs(mix).max() / 0.95
 wavfile.write('data/mix_raw.wav', SR, (mix[:int(DUR * SR)] * 32767).astype(np.int16))
