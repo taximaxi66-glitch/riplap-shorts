@@ -1,0 +1,23 @@
+{
+ "voice": "am_fenrir", "lead": 0.35, "outro": 1.6,
+ "lines": [
+  {"id":"hook",  "text":"How do you survive... the Pale Stretcher?", "speed":1.0, "gap":0.35},
+  {"id":"car",   "text":"It's two A.M., and your car dies on an empty forest road.", "speed":1.02, "gap":0.3},
+  {"id":"fog",   "text":"Then, far down the road, in the fog...", "speed":0.95, "gap":0.25},
+  {"id":"stand", "text":"something is standing.", "speed":0.85, "gap":0.55},
+  {"id":"tall",  "text":"It's nine feet tall, with arms that hang down to its knees.", "speed":0.98, "gap":0.35},
+  {"id":"rule",  "text":"Rule number one: never look at its face.", "speed":0.95, "gap":0.3},
+  {"id":"see",   "text":"If you see it, it screams...", "speed":1.0, "gap":0.15},
+  {"id":"runs",  "text":"and it runs at you. It never stops.", "speed":1.05, "gap":0.45},
+  {"id":"walk",  "text":"Now it's walking toward your car.", "speed":0.95, "gap":0.35},
+  {"id":"woods", "text":"Run into the woods? No. With those legs, it catches you in seconds.", "speed":1.08, "gap":0.3},
+  {"id":"lock",  "text":"Lock the doors? If it's hunting you, glass won't stop it.", "speed":1.08, "gap":0.4},
+  {"id":"works", "text":"Here's what works. Lights off, cover your eyes, and slide down into the footwell.", "speed":1.02, "gap":0.5},
+  {"id":"feet",  "text":"Bare feet on the asphalt... right next to your door.", "speed":0.9, "gap":0.5},
+  {"id":"tap",   "text":"Long fingers tap on the window.", "speed":0.92, "gap":0.9},
+  {"id":"still", "text":"Don't move. Don't breathe. And don't open your eyes.", "speed":0.92, "gap":0.3},
+  {"id":"wait",  "text":"Because it's waiting for you to look.", "speed":0.88, "gap":0.9},
+  {"id":"dawn",  "text":"Keep them shut until sunrise. At dawn, it's gone.", "speed":1.0, "gap":0.45},
+  {"id":"cta",   "text":"Would you have survived? Follow, because part four is coming for you.", "speed":1.02, "gap":0.0}
+ ]
+}

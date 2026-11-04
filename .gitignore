@@ -1,0 +1,4 @@
+**/renders/
+**/review/
+**/data/*.wav
+node_modules/

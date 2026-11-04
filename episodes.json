@@ -1,0 +1,25 @@
+[
+    {
+        "part": 1,
+        "title": "Ringmaster Rot",
+        "monster": "Ringmaster Rot (killer clown ringmaster)",
+        "setting": "circus",
+        "youtube": null
+    },
+    {
+        "part": 2,
+        "title": "Hay Reaper",
+        "monster": "Hay Reaper (scarecrow with sickle)",
+        "setting": "farm / barn",
+        "youtube": null
+    },
+    {
+        "part": 3,
+        "title": "How do you survive the Pale Stretcher? \ud83d\udc41\ufe0f Part 3",
+        "monster": "The Pale Stretcher: 9 ft pale emaciated humanoid, gaping black mouth, white pinpoint eyes; attacks only if you see its face",
+        "setting": "foggy forest road at night, broken-down car",
+        "date": "2026-11-04",
+        "youtube": "K4FWNMG-KQo",
+        "source": "episodes/part3-pale-stretcher"
+    }
+]
