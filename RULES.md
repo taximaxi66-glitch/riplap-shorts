@@ -18,6 +18,7 @@ Every new episode must look, move and sound like **Part 3 – The Pale Stretcher
 - Call to action every time: ask to like and follow, smartly tied to the story (e.g. "Would you have survived? Follow, because part five is coming for you."), with a heart + "+ FOLLOW" button + "PART N+1 SOON" pop-ups.
 
 ## Look (3D comic look, build on the Part 3 test scene look)
+- **The world stays 3D (2.5D perspective) in every episode.** Every new set (corridor, tunnel, room, field, stairwell...) is built in the perspective world like Part 3's road: objects placed at real x/y/z positions and drawn through `proj(cam, x, y, z)`, depth fog with `fogK`, depth-sorted sprites, a moving camera (dolly, rise, tilt) with real parallax. Creatures walk through that space (feet on the ground plane, perspective size from depth). Flat side-on backdrops (`sideForest`-style layers) are only for short in-between shots (like Part 3's chase or car-door views) and must still have several parallax depth layers. At least half of the video's shots use the true perspective camera.
 - 2.5D perspective world with depth + flat comic shading and ink outlines. Dark, cold, cinematic. Single warm light sources.
 - Every scene alive: drifting clouds, bats/birds, falling leaves, particles, swaying trees, rain with dark clouds when it fits, light rays, soft vignette, light volumetric fog that stays pleasant to look at. Never a static sky.
 - Take time for every graphic: detailed props (not two circles and a line), small background details.
