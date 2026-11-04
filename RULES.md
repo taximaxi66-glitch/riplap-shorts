@@ -1,7 +1,13 @@
 # RipLab horror shorts: the rules (from the channel owner)
 
 Series: **"How do you survive this horror character? Part N"**. English narration and captions, vertical 1080x1920, 30 fps, 45-58 s.
-Channel: YouTube **RipLab (@rip_lab)**. Reference episode that the owner liked a lot: `episodes/part3-pale-stretcher` (look, pacing, sound).
+Channel: YouTube **RipLab (@rip_lab)**.
+
+## THE reference: Part 3 (owner: "the best result so far")
+Every new episode must look, move and sound like **Part 3 – The Pale Stretcher** (`episodes/part3-pale-stretcher`, on YouTube: K4FWNMG-KQo). Same visual style, same quality, same pacing; only the creature, the setting and the story are new.
+- Before building, open and look at `reference/part3_sheet.jpg` (a frame every 0.5 s of the whole video) and several `reference/part3_*.jpg` key frames (the number = second).
+- Match: dark night palette with cold blue fog and contrast; moon/clouds/bats/particles alive; 2.5D perspective world with comic ink outlines; the creature large and clearly readable; continuous camera moves that flow into each other; character-select spinner; yellow RULE card; grey what-if scenes with a big red X; green "HERE'S WHAT WORKS" checklist; close-up scare of the creature's face against glass/in darkness; calm dawn resolution; CTA block (WOULD YOU HAVE SURVIVED? + heart + FOLLOW + PART N SOON); same caption style; same music bed and sound density.
+- After your QA sheet is rendered, compare it side by side with `reference/part3_sheet.jpg`. If yours looks flatter, greyer, emptier, less detailed or less scary, fix it before rendering.
 
 ## Story
 - A real, gripping story told to "you", with concrete scenarios and options, not a list of facts. The viewer should feel fear and root for the survivor.

@@ -9,6 +9,7 @@ Read `RULES.md` fully first. `episodes.json` lists every episode so far (creatur
 - Facts about this environment (all verified): huggingface / Whisper downloads are blocked (word timing is done by `voice.py` with DTW alignment instead, it is accurate); temp file hosts (litterbox, uguu, catbox) are blocked; GitHub releases and branch deletion are blocked; **force-push to a branch works** and raw.githubusercontent.com URLs are fetchable by Zapier.
 
 ## 1. Plan the episode
+- First look at `reference/part3_sheet.jpg` and 4-6 `reference/part3_*.jpg` frames: this is the target look (see RULES.md).
 - N = highest part in episodes.json + 1.
 - Invent a new original creature (SCP-096-like deformed humanoid; new silhouette, new rule/weakness) and a new setting not used before (ideas: abandoned hospital ward, subway tunnel, frozen lake cabin, school at night, motel, cornfield at dusk, lighthouse, ski lift, parking garage, apartment stairwell…).
 - Write the narration (≈120-150 words → 48-56 s) in `script.json` lines with per-line `speed` (0.85-1.08) and `gap` (pauses before scary beats). Line 1 = "How do you survive... the <Name>?". Last line = CTA with "part <N+1>".
@@ -24,6 +25,7 @@ Read `RULES.md` fully first. `episodes.json` lists every episode so far (creatur
 
 ## 3. QA (never skip; max ~3 rounds)
 - `node render.mjs frames review/f "t1,t2,..."` for single frames; `node render.mjs sheet review/all.jpg 0.5` for a sheet of the whole video. LOOK at them (Read the jpg).
+- Compare with `reference/part3_sheet.jpg`: same look and quality level, or better.
 - Check every frame: makes sense with the narration at that moment; creature clearly visible and scary; nothing collides with captions; all text inside the frame; no blank/washed-out frames; proportions right; nothing flickers; spinner lands fast.
 - Pitfalls hit before: fog too heavy/grey (keep the night palette dark with contrast); headlight glow too strong when the camera is near the car; creatures hidden behind the car or dissolved in bright dawn fog (use `fogMul`); shots overlapping because a long fade starts too early; scratch() canvases rotate (max 4 in use at once).
 
