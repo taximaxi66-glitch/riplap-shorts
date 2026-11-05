@@ -1,0 +1,24 @@
+{
+ "voice": "am_fenrir", "lead": 0.35, "outro": 1.6,
+ "lines": [
+  {"id":"hook",  "text":"How do you survive... the Frostjaw?", "speed":1.0, "gap":0.35},
+  {"id":"lake",  "text":"It's midnight, and you're ice fishing alone on a frozen lake.", "speed":1.03, "gap":0.3},
+  {"id":"snap",  "text":"Then your line snaps...", "speed":0.95, "gap":0.3},
+  {"id":"climb", "text":"and far out on the ice, something crawls out of the water.", "speed":0.9, "gap":0.5},
+  {"id":"tall",  "text":"It's eight feet tall, and its face is split open from chin to forehead.", "speed":1.0, "gap":0.35},
+  {"id":"rule",  "text":"Rule number one: it's blind. It hunts by sound.", "speed":0.95, "gap":0.3},
+  {"id":"noise", "text":"Make one noise...", "speed":0.95, "gap":0.15},
+  {"id":"finds", "text":"and it finds you.", "speed":0.92, "gap":0.45},
+  {"id":"turn",  "text":"Now its head is turning toward you.", "speed":0.95, "gap":0.35},
+  {"id":"run",   "text":"Run for the cabin? No. The ice cracks under every step.", "speed":1.08, "gap":0.3},
+  {"id":"call",  "text":"Call for help? Your phone buzzes, and it hears that too.", "speed":1.08, "gap":0.4},
+  {"id":"works", "text":"Here's what works. Phone off, lie flat, and breathe into your sleeve.", "speed":1.02, "gap":0.5},
+  {"id":"feet",  "text":"Its feet crunch across the ice... right next to your head.", "speed":0.9, "gap":0.5},
+  {"id":"jaw",   "text":"Its jaw opens, inches above your face.", "speed":0.9, "gap":0.7},
+  {"id":"still", "text":"Don't move. Don't breathe.", "speed":0.9, "gap":0.6},
+  {"id":"throw", "text":"Now throw your ice pick far across the lake.", "speed":1.0, "gap":0.2},
+  {"id":"chase", "text":"It chases the sound, and you crawl to shore.", "speed":1.0, "gap":0.45},
+  {"id":"dawn",  "text":"At dawn, it slides back under the ice.", "speed":1.0, "gap":0.45},
+  {"id":"cta",   "text":"Would you have survived? Follow, because part five is coming for you.", "speed":1.02, "gap":0.0}
+ ]
+}

@@ -21,5 +21,15 @@
         "date": "2026-11-04",
         "youtube": "K4FWNMG-KQo",
         "source": "episodes/part3-pale-stretcher"
+    },
+    {
+        "part": 4,
+        "title": "How do you survive the Frostjaw? \ud83e\uddca Part 4",
+        "monster": "The Frostjaw: 8 ft frostbitten, eyeless humanoid with a face split from chin to forehead (opens into needle teeth); blind, hunts by sound",
+        "setting": "frozen lake at midnight, ice fishing hole, cabin on the shore",
+        "date": "2026-11-05",
+        "youtube": "aX-gYJ0bVZ8",
+        "privacy": "private (public upload was blocked by the automation permission check; owner must switch to public)",
+        "source": "episodes/part4-frostjaw"
     }
 ]
