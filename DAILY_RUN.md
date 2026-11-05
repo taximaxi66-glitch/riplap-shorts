@@ -38,7 +38,8 @@ Read `RULES.md` fully first. `episodes.json` lists every episode so far (creatur
   `video` = the URL, `title` = "How do you survive the <Name>? <emoji> Part N" (≤ 70 chars), `description` = 2-sentence teaser + "Would you have survived? Follow for Part N+1!" + "\n\n#shorts #horror #scary #survival #creepy #scarystories #animation", `tags` 6-8, `category_id` "24", `privacy_status` "public", `made_for_kids` "false", `embeddable` "true", `notify_subscribers` "true", `default_language` "en", `default_audio_language` "en", `license` "youtube".
 - Then `bash push_video.sh --clear`.
 
-## 6. Record + report
-- Delete `renders/`, `review/`, `data/*.wav` from the episode folder (keep source + data/timing.json + data/cues.json). Append the episode to episodes.json (part, title, monster, setting, date, youtube id, source). Commit to main and push (`git fetch origin main && git rebase origin/main` first if needed).
+## 6. Keep the video, record + report
+- **NEVER delete the finished video** (owner's explicit instruction: he also uploads every episode to TikTok). Copy `renders/final.mp4` to `videos/part<N>-<slug>.mp4` in the repo and commit it. Also send it to the owner with SendUserFile (display "attach") so he can download it right away.
+- Then delete only the intermediate files: `renders/` (after the copy above), `review/`, `data/*.wav` from the episode folder (keep source + data/timing.json + data/cues.json). Append the episode to episodes.json (part, title, monster, setting, date, youtube id, source, video file). Commit to main and push (`git fetch origin main && git rebase origin/main` first if needed).
 - Send the owner one short message in German (SendUserMessage): title, YouTube link `https://www.youtube.com/watch?v=<id>`, one line about the creature.
 - If something failed so the video is not good enough or could not be uploaded: do NOT upload a broken video. Report in German what happened.
