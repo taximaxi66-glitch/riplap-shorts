@@ -32,5 +32,16 @@
         "privacy": "private (public upload was blocked by the automation permission check; owner must switch to public)",
         "source": "episodes/part4-frostjaw",
         "video": "videos/part4-frostjaw.mp4"
+    },
+    {
+        "part": 5,
+        "title": "How do you survive the Mimicker? \ud83d\udde3\ufe0f Part 5",
+        "monster": "The Mimicker: 9 ft grey humanoid with stringy hair, milky eyes and a jaw hanging to its chest; copies voices (your dead mom), can't come inside unless you answer",
+        "setting": "empty desert gas station at 3 a.m. (canopy, pumps, convenience store)",
+        "date": "2026-11-06",
+        "youtube": "7AXWctoGdQM",
+        "privacy": "public",
+        "source": "episodes/part5-mimicker",
+        "video": "videos/part5-mimicker.mp4"
     }
 ]

@@ -1,0 +1,21 @@
+{
+ "voice": "am_fenrir", "lead": 0.35, "outro": 1.6,
+ "lines": [
+  {"id":"hook",  "text":"How do you survive... the Mimicker?", "speed":1.0, "gap":0.35},
+  {"id":"gas",   "text":"It's three A.M., and you stop for gas at an empty desert station.", "speed":1.05, "gap":0.3},
+  {"id":"voice", "text":"Then, from the dark, you hear your mom calling your name.", "speed":0.97, "gap":1.85},
+  {"id":"but",   "text":"But your mom died last year.", "speed":0.88, "gap":0.5},
+  {"id":"light", "text":"Something steps into the light.", "speed":0.9, "gap":0.4},
+  {"id":"tall",  "text":"It's nine feet tall, and its jaw hangs down to its chest.", "speed":1.02, "gap":0.3},
+  {"id":"rule",  "text":"Rule number one: it copies voices, and it can't come inside... unless you answer.", "speed":1.0, "gap":0.3},
+  {"id":"calls", "text":"Now it's calling you, in your mother's voice.", "speed":0.97, "gap":2.2},
+  {"id":"run",   "text":"Run for your car? No. It rips the door right off.", "speed":1.08, "gap":0.3},
+  {"id":"shout", "text":"Yell at it to go away? That's an answer, and now it's inside.", "speed":1.08, "gap":0.4},
+  {"id":"works", "text":"Here's what works. Get inside, lock the door, and cover your ears.", "speed":1.04, "gap":0.45},
+  {"id":"glass", "text":"Its face presses against the glass... right next to you.", "speed":0.92, "gap":0.3},
+  {"id":"begs",  "text":"It begs you to answer.", "speed":0.92, "gap":1.85},
+  {"id":"dont",  "text":"Don't. Say. A word.", "speed":0.85, "gap":0.5},
+  {"id":"dawn",  "text":"At dawn, the voice goes quiet, and it walks back into the desert.", "speed":1.02, "gap":0.4},
+  {"id":"cta",   "text":"Would you have survived? Follow, because part six is coming for you.", "speed":1.03, "gap":0.0}
+ ]
+}
