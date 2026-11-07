@@ -6,12 +6,15 @@ Channel: YouTube **RipLab (@rip_lab)**.
 ## THE reference: Part 3 (owner: "the best result so far")
 Every new episode must look, move and sound like **Part 3 – The Pale Stretcher** (`episodes/part3-pale-stretcher`, on YouTube: K4FWNMG-KQo). Same visual style, same quality, same pacing; only the creature, the setting and the story are new.
 - Before building, open and look at `reference/part3_sheet.jpg` (a frame every 0.5 s of the whole video) and several `reference/part3_*.jpg` key frames (the number = second).
-- Match: dark night palette with cold blue fog and contrast; moon/clouds/bats/particles alive; 2.5D perspective world with comic ink outlines; the creature large and clearly readable; continuous camera moves that flow into each other; character-select spinner; yellow RULE card; grey what-if scenes with a big red X; green "HERE'S WHAT WORKS" checklist; close-up scare of the creature's face against glass/in darkness; calm dawn resolution; CTA block (WOULD YOU HAVE SURVIVED? + heart + FOLLOW + PART N SOON); same caption style; same music bed and sound density.
+- Match: dark night palette with cold blue fog and contrast; moon/clouds/bats/particles alive; 2.5D perspective world with comic ink outlines; the creature large and clearly readable; continuous camera moves that flow into each other; yellow RULE card; grey what-if scenes with a big red X; green "HERE'S WHAT WORKS" checklist; close-up scare of the creature's face against glass/in darkness; calm dawn resolution; CTA block (WOULD YOU HAVE SURVIVED? + heart + FOLLOW + PART N SOON); same caption style; same music bed and sound density.
 - After your QA sheet is rendered, compare it side by side with `reference/part3_sheet.jpg`. If yours looks flatter, greyer, emptier, less detailed or less scary, fix it before rendering.
 
 ## Story
 - A real, gripping story told to "you", with concrete scenarios and options, not a list of facts. The viewer should feel fear and root for the survivor.
-- Shape that works (Part 3): fast hook → where you are and what goes wrong → the creature appears (show it a lot) → its rule(s) on a RULE card → 2 wrong options shown as grey "what-if" scenes, each ending in a big red X → "Here's what works" with a green checklist synced to the words → the scariest close call (creature right next to you) → how you survive → CTA.
+- **NO character-select spinner any more (owner, 2026-11-07).** Part 5 data: 47 % swiped away in the first second because the intro was a calm menu screen.
+- **Start in a relatable everyday situation (owner, 2026-11-07):** the opening is a moment that ANY viewer can identify with, regardless of age, gender or social role, ideally at home: a house, an apartment, a bedroom, a kitchen, a bathroom, a hallway, a front door, a stairwell. Something everyone knows (lying in bed at night, getting a glass of water in the dark kitchen, brushing teeth in the mirror, the doorbell ringing late, a phone buzzing on the nightstand). The story can get as fantastic as it wants afterwards, but the starting situation must be instantly recognizable.
+- The very first second already shows something wrong in that everyday scene (a sound, a shape, a face where it shouldn't be) with a short on-screen line, so nobody swipes away. The title question "How do you survive the <Name>?" comes after that first shock (within ~3-5 s), not as the opener.
+- Shape that works (Part 3): relatable everyday opening with an instant shock → what goes wrong → the creature appears (show it a lot) → its rule(s) on a RULE card → 2 wrong options shown as grey "what-if" scenes, each ending in a big red X → "Here's what works" with a green checklist synced to the words → the scariest close call (creature right next to you) → how you survive → CTA.
 - Darker / more brutal is fine, but no gore close-ups. Show the creature MUCH.
 - Every episode gets a **new, original** creature in the disturbing SCP-096 style: human-like but completely deformed (stretched limbs, wrong proportions, gaping mouth, blank eyes, twitching). Never reuse an old one; never use a known franchise character (no SCP-096 itself, Slenderman, Siren Head, etc.). Vary the setting too (see episodes.json for what was done).
 - Give the creature one clear, learnable weakness/rule so the survival advice is logical.
@@ -30,7 +33,7 @@ Every new episode must look, move and sound like **Part 3 – The Pale Stretcher
 - No flicker: no flickering lights, strobing or random dark frames. Light changes are smooth.
 - No random automatic zooms; a camera push/zoom only where it means something (a reveal, a scream).
 - Transitions flow into each other like a living film (continuous camera moves, dissolves through fog/black, match cuts). Hard cut only on a scare beat. Never PowerPoint-style.
-- Hook within 3-4 s: the character-select spinner (portraits of previous creatures + the new one, yellow selector, "PART N" chip) lands in ≤ 2.6 s.
+- Hook in the first second: the relatable home situation with something already wrong in frame (see Story). No spinner, no menu, no title card as the first image. A small "PART N" chip may appear later as an overlay.
 
 ## Text
 - Captions: smaller (Inter Black 64 px, white, black stroke), centred around y 1440, 1-3 words per chunk, each word pops exactly when spoken, one red keyword per chunk.
