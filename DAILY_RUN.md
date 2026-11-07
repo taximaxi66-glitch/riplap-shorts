@@ -24,11 +24,15 @@ Read `RULES.md` fully first. `episodes.json` lists every episode so far (creatur
 - Add any new sound effect to mix.py (`s_<name>`), and set its level in VOL.
 - Run the voice first (`$HOME/.faceless-shorts/venv/bin/python voice.py .` inside the episode folder) so `data/timing.json` exists, then write shots against the real word times.
 
-## 3. QA (never skip; max ~3 rounds)
-- `node render.mjs frames review/f "t1,t2,..."` for single frames; `node render.mjs sheet review/all.jpg 0.5` for a sheet of the whole video. LOOK at them (Read the jpg).
-- Compare with `reference/part3_sheet.jpg`: same look and quality level, or better.
-- Check every frame: makes sense with the narration at that moment; creature clearly visible and scary; nothing collides with captions; all text inside the frame; no blank/washed-out frames; proportions right; nothing flickers; the very first frame already shows the everyday scene with something wrong in it (no spinner/menu).
-- Motion check: look at 5-fps frame strips of every shot where something moves or touches something (walks, grabs, climbs): feet planted, hands really holding, no floating, no pose snaps (see RULES.md "Lessons"). Pitfalls hit before: fog too heavy/grey (keep the night palette dark with contrast); headlight glow too strong when the camera is near the car; creatures hidden behind the car or dissolved in bright dawn fog (use `fogMul`); shots overlapping because a long fade starts too early; scratch() canvases rotate (max 4 in use at once).
+## 3. QA: frame by frame, every centimetre (owner's explicit instruction; never shorten this)
+The owner wants every frame checked before anything is uploaded: does everything fit, does anything stick out where it should not, is every centimetre right. Do all of this, look at every image you render (Read the jpg), and repeat after every fix until there is nothing left:
+1. **Dense sheets of the whole video:** a frame every 0.2 s (`node render.mjs sheet review/all.jpg 0.2`), split so each sheet holds at most ~48 frames at ≥ 270 px width; read every sheet.
+2. **Full-size frames (1080x1920)** at: the first frame, start / middle / end of every shot, every text pop-up (on its word and +0.3 s), every creature appearance and every contact moment (grab, step, touch, break). Look at each one closely, edges and corners included.
+3. **Every frame of every moving shot:** render all 30 fps frames of shots with walking, grabbing, climbing, breaking or camera moves as strips (e.g. 10 per row) and check them in order.
+4. In every image check: limbs or props poking through walls/doors/furniture/the ground, things that stick out of the frame or are cut off, gaps or holes in drawn shapes, outlines in the wrong place, objects floating or sinking into the floor, feet not planted, pose or position jumps between frames, wrong proportions, text outside the frame (x 60-1020, y 150-1650) or overlapping captions/other text/the creature's face, captions on the wrong word, blank, grey or washed-out frames, flicker between neighbouring frames, the creature unclear or not scary, scenes without depth or without moving life.
+5. Compare with `reference/part3_sheet.jpg`: same look and quality level, or better.
+6. **After the final render** (step 4), check the finished mp4 again: a sheet every 0.2 s taken from the mp4 itself (`ffmpeg -i renders/final.mp4 -vf "fps=5,scale=270:-1,tile=6x8" review/final_%02d.jpg`), reading every sheet. Only upload when it is perfect.
+- Pitfalls hit before: fog too heavy/grey (keep the night palette dark with contrast); headlight glow too strong when the camera is near the car; creatures hidden behind objects or dissolved in bright fog (use `fogMul`); shots overlapping because a long fade starts too early; scratch() canvases rotate (max 4 in use at once).
 
 ## 4. Render
 - `bash build.sh episodes/part<N>-<slug>` (≈5-6 min). Prints `BUILD OK`, final file `renders/final.mp4`. Look at `review/final_sheet.jpg` once more.

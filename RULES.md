@@ -11,6 +11,7 @@ Every new episode must LOOK and SOUND like **Part 3 – The Pale Stretcher** (`e
 - After your QA sheet is rendered, compare it side by side with `reference/part3_sheet.jpg`. If yours looks flatter, greyer, emptier, less detailed or less scary, fix it before rendering.
 
 ## Story (new structure, owner 2026-11-07)
+- **The story must be gripping enough to go viral.** First second: a hook that makes people stay. Then escalate every few seconds (a new sound, a new detail, it gets closer), never a calm stretch. A clear emotional curve: normal → uneasy → mystery → dread → reveal → panic → the impossible choice. The viewer must feel they are in it and want to comment their choice.
 - **Universal starting situation.** Every viewer must recognise it, whatever their age, gender, job or social role. NOT situations only some people know (night-shift lighthouse keeper, filling up the car at midnight, ice fishing: young viewers have never done that). It does NOT always have to be the bedroom; vary between everyday life moments, for example:
   - home alone in the evening, lying in bed scrolling your phone (parents out, siblings away)
   - walking home alone at night (from a friend's place, a party, a visit) through a dark village/street with only a few weak streetlights
@@ -30,6 +31,8 @@ Every new episode must LOOK and SOUND like **Part 3 – The Pale Stretcher** (`e
 
 ## Look (the comic look of Part 3)
 - Stay with the Part 3 engine and look (`engine/`). The owner does not want an extra focus on 3D: do NOT switch to a real-3D / three.js engine (`engine3d/`, used once for night01) and do not build scenes around 3D effects. Spend the effort on story, atmosphere and mood instead.
+- **Strong depth and a truly living world (owner, 2026-11-07).** Every scene must have a clear depth effect, built with the Part 3 2.5D engine (objects at real x/y/z through `proj`, depth fog, depth-sorted layers): a detailed foreground, a midground and a background, camera moves with parallax, light and fog in depth. The world must feel alive at all times (wind in trees/curtains, drifting fog and particles, birds/bats, moving clouds, rain, small background details that move). Do not use three.js for it.
+- **Monster movement must be scary, never boring (owner: in night01 the monster's walk and how monsters simply came into frame was boring, no horror at all).** Never let a creature just walk into frame. Build every appearance as suspense: silence or a sound drop first, then a partial reveal (eyes in the dark, fingers around a door frame, a silhouette that does not belong), then unnatural motion: frozen stillness and a sudden jerk, too-fast head turns, stop-start twitching, crawling on walls/ceiling, limbs bending the wrong way, slowly unfolding to full height. When it walks, it walks heavy with planted feet and weight, never gliding.
 - Flat comic shading and ink outlines like Part 3. Dark, cold, cinematic. Single warm light sources.
 - Every scene alive: drifting clouds, bats/birds, falling leaves, particles, swaying trees, rain with dark clouds when it fits, light rays, soft vignette, light volumetric fog that stays pleasant to look at. Never a static sky.
 - Take time for every graphic: detailed props (not two circles and a line), small background details.
