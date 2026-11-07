@@ -1,0 +1,20 @@
+{
+ "voice": "am_fenrir", "lead": 0.35, "outro": 1.6,
+ "lines": [
+  {"id":"hook",  "text":"How do you survive... the Undertow?", "speed":1.0, "gap":0.35},
+  {"id":"keep",  "text":"You're the night keeper of a lonely lighthouse, and at midnight, the great lamp goes dark.", "speed":1.05, "gap":0.35},
+  {"id":"sea",   "text":"Then, something crawls out of the sea.", "speed":0.94, "gap":1.1},
+  {"id":"bent",  "text":"It walks on its hands and feet, bent backwards... and its head hangs upside down.", "speed":0.97, "gap":0.35},
+  {"id":"tall",  "text":"When it stands up, it's ten feet tall.", "speed":0.98, "gap":0.3},
+  {"id":"rule",  "text":"Rule number one: it can't touch the light. But in the dark, it's faster than you.", "speed":1.02, "gap":0.3},
+  {"id":"seen",  "text":"And now, it has seen you.", "speed":0.9, "gap":1.3},
+  {"id":"boat",  "text":"Run for your boat? No. The water is where it hunts.", "speed":1.07, "gap":0.3},
+  {"id":"rocks", "text":"Hide in the rocks? It smells you, and it's on you in seconds.", "speed":1.07, "gap":0.4},
+  {"id":"works", "text":"Here's what works. Get inside, run to the top, and relight the lamp.", "speed":1.04, "gap":0.45},
+  {"id":"climb", "text":"It climbs the tower... and presses its face against the glass.", "speed":0.94, "gap":0.3},
+  {"id":"next",  "text":"Right next to you.", "speed":0.88, "gap":1.5},
+  {"id":"stay",  "text":"Stay. In. The light.", "speed":0.85, "gap":0.5},
+  {"id":"dawn",  "text":"At sunrise, it lets go, and slides back into the sea.", "speed":1.03, "gap":0.4},
+  {"id":"cta",   "text":"Would you have survived? Follow, because part seven is coming for you.", "speed":1.03, "gap":0.0}
+ ]
+}
