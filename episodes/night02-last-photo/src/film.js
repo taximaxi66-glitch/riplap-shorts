@@ -33,7 +33,7 @@ function setup() {
   const ph = new THREE.Mesh(new THREE.BoxGeometry(0.075, 0.15, 0.01), OUT(mat(0x111111))); ph.position.set(0, 0.04, -0.02); ph.rotation.x = -1.2; pov.add(ph);
     pov.position.set(0.17, -0.21, -0.38);
   flash = new THREE.SpotLight(0xe8eeff, 0, 14, 0.42, 0.6, 1.4); flash.castShadow = true; flash.shadow.mapSize.set(1024, 1024); flash.shadow.bias = -0.0008; flash.shadow.camera.near = 0.08;
-  flashT = new THREE.Object3D(); camera.add(flash, flashT); flash.position.set(0.17, -0.12, -0.42); flashT.position.set(0.05, -0.2, -5); flash.angle = 0.42; flash.penumbra = 0.6; flash.target = flashT;
+  flashT = new THREE.Object3D(); camera.add(flash, flashT); flash.position.set(0.17, -0.12, -0.42); flashT.position.set(0.05, -0.2, -5); flash.angle = 0.42; flash.penumbra = 0.6; flash.castShadow = true; HL.photos.forEach(ph => ph.gl.material.opacity = 0.7); flash.target = flashT;
   // the phone held up close (battery screen)
   phoneBig = new THREE.Group(); const pb = new THREE.Mesh(new THREE.BoxGeometry(0.078, 0.158, 0.009), OUT(mat(0x101012))); phoneBig.add(pb);
   const scr = new THREE.Mesh(new THREE.PlaneGeometry(0.07, 0.148), new THREE.MeshBasicMaterial({ map: batteryTex() })); noOutline(scr.material); scr.position.z = 0.0052; phoneBig.add(scr);
@@ -111,8 +111,8 @@ function build() {
     const k = ss(carGo, s2b + 0.6, t);
     LV.car.position.set(lerp(3.2, -14, ein(k) * 0.6 + k * 0.4), -0.25, -11.0);
     placeYou(2.15, 0.94, -3.95, 180); const p = stand(t, { phone: false, yaw: lerp(-10, 30, k) }); you.pose(p); you.setExpr('normal'); you.setPhone(null);
-    const cp = V(lerp(0.75, 0.95, inv(s2a, s2b, t)), 1.5, lerp(-1.55, -1.95, inv(s2a, s2b, t))).add(shake(t, 0.006));
-    cam(cp, V(1.55, 1.35, -4.6));
+    const cp = V(lerp(1.05, 1.2, inv(s2a, s2b, t)), 1.55, lerp(-1.35, -1.75, inv(s2a, s2b, t))).add(shake(t, 0.006));
+    cam(cp, V(1.95, 1.3, -4.6));
   } });
   // ===== 3. over your shoulder: down the hallway, past the photos =====
   const s3a = s2b, s3b = L('l3').start - 0.2, walkEnd = L('l2b').end - 0.1;
@@ -123,7 +123,7 @@ function build() {
     const z = zAt(t), walking = t < walkEnd, look = ss(walkEnd - 0.6, s3b, t);
     placeYou(0.78, 0.94 + (walking ? Math.cos(phAt(t) * 2) * 0.012 : 0), z, lerp(0, -38, look));
     const p = walking ? walkP(phAt(t), t) : stand(t); p.head = [0, lerp(0, -40, look), 0]; you.pose(p); you.setExpr('normal'); you.setPhone('light'); you.torchT.position.set(-0.3, -0.25, -3);
-    const cp = V(1.28, 1.88, z - 1.55).add(shake(t, 0.01)); cam(cp, V(0.55, 1.35, z + 2.6).lerp(onPhoto(0, 0.5, 0.5), look * 0.55), 0, 52);
+    const cp = V(1.4, 2.02, z - 1.85).add(shake(t, 0.01)); cam(cp, V(0.55, 1.35, z + 2.6).lerp(onPhoto(0, 0.5, 0.5), look * 0.55), 0, 52);
   } });
   // ===== 4. close on your face in the phone light: something feels wrong =====
   const s4a = s3b, s4b = L('l4').start - 0.2;
@@ -138,8 +138,8 @@ function build() {
   cue(ww('l4b', 'standing') , 'sting', 0.7); cue(ww('l4b', 'someone') - 0.1, 'mduck', 0.9); cue(L('l5').start, 'heartbeat', 0.5);
   S.push({ a: s5a, b: s5b, fade: 0.3, go: t => {
     const c = keys([{ t: s5a, d: 1.2, u: 0.5, v: 0.5 }, { t: L('l4').end, d: 1.0, u: 0.5, v: 0.52 }, { t: ww('l4b', 'standing') + 0.2, d: 0.26, u: 0.76, v: 0.54 }, { t: L('l5').end, d: 0.2, u: 0.76, v: 0.53 }, { t: L('l6').start + 0.3, d: 0.42, u: 0.72, v: 0.52 }, { t: s5b, d: 0.5, u: 0.7, v: 0.52 }], t);
-    flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; const tgt = onPhoto(0, c.u, c.v); cam(tgt.clone().add(V(c.d, 0.02, -c.d * 0.12)).add(shake(t, 0.004 * c.d)), tgt);
-    flash.intensity = 2.6 + c.d * 1.5; pov.visible = c.d > 0.8;
+    flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; flash.castShadow = false; HL.photos.forEach(ph => ph.gl.material.opacity = 0.18); const tgt = onPhoto(0, c.u, c.v); cam(tgt.clone().add(V(c.d, 0.02, -c.d * 0.12)).add(shake(t, 0.004 * c.d)), tgt);
+    flash.intensity = 0.7 + c.d * 2.2; pov.visible = c.d > 0.8;
   } });
   // ===== 6. Christmas: there it is again, in the corner, closer, head tilted =====
   const s6a = s5b, s6b = L('l8').start - 0.2;
@@ -147,9 +147,9 @@ function build() {
   S.push({ a: s6a, b: s6b, fade: 0.25, go: t => {
     const pan = ss(s6a, L('l7').end, t);
     const c = keys([{ t: L('l7').end, d: 1.0, u: 0.5, v: 0.5 }, { t: ww('l7b', 'corner.') + 0.1, d: 0.45, u: 0.22, v: 0.5 }, { t: ww('l7b', 'closer.') + 0.2, d: 0.3, u: 0.18, v: 0.42 }, { t: s6b, d: 0.2, u: 0.2, v: 0.22 }], t);
-    flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; const tgt = onPhoto(1, c.u, c.v), from = onPhoto(0, 0.6, 0.5); const look = from.clone().lerp(tgt, pan);
+    flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; flash.castShadow = false; HL.photos.forEach(ph => ph.gl.material.opacity = 0.18); const tgt = onPhoto(1, c.u, c.v), from = onPhoto(0, 0.6, 0.5); const look = from.clone().lerp(tgt, pan);
     cam(look.clone().add(V(lerp(0.6, c.d, pan), 0.03, -0.05 * c.d)).add(shake(t, 0.004)), look);
-    flash.intensity = 3.2; pov.visible = pan < 0.5;
+    flash.intensity = 1.6; pov.visible = pan < 0.5;
   } });
   // ===== 7. Your birthday: right behind your chair, its fingers on your shoulder =====
   const s7a = s6b, s7b = L('l9').start - 0.2;
@@ -157,24 +157,24 @@ function build() {
   S.push({ a: s7a, b: s7b, fade: 0.25, go: t => {
     const pan = ss(s7a, L('l8').start + 0.7, t);
     const c = keys([{ t: L('l8').start + 0.7, d: 1.0, u: 0.5, v: 0.5 }, { t: ww('l8', 'chair...'), d: 0.5, u: 0.5, v: 0.32 }, { t: ww('l8b', 'fingers') + 0.4, d: 0.17, u: 0.555, v: 0.52 }, { t: s7b, d: 0.13, u: 0.56, v: 0.53 }], t);
-    flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; const tgt = onPhoto(2, c.u, c.v), from = onPhoto(1, 0.3, 0.4); const look = from.clone().lerp(tgt, pan);
+    flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; flash.castShadow = false; HL.photos.forEach(ph => ph.gl.material.opacity = 0.18); const tgt = onPhoto(2, c.u, c.v), from = onPhoto(1, 0.3, 0.4); const look = from.clone().lerp(tgt, pan);
     cam(look.clone().add(V(lerp(0.5, c.d, pan), 0.02, -0.05 * c.d)).add(shake(t, 0.003)), look);
-    flash.intensity = 3.0; pov.visible = false;
+    flash.intensity = 1.3; pov.visible = false;
   } });
   // ===== 8. the last photo: you've never seen it before =====
   const s8a = s7b, s8b = L('l10').start - 0.1;
   cue(ww('l9', 'never'), 'mduck', 0.8); cue(s8a, 'whoosh', 0.3);
   S.push({ a: s8a, b: s8b, fade: 0.3, go: t => {
-    flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; const pan = ss(s8a, L('l9').start + 1.2, t), push = ss(L('l9').start + 1.2, s8b + 0.6, t);
+    flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; flash.castShadow = false; HL.photos.forEach(ph => ph.gl.material.opacity = 0.18); const pan = ss(s8a, L('l9').start + 1.2, t), push = ss(L('l9').start + 1.2, s8b + 0.6, t);
     const from = onPhoto(2, 0.5, 0.5), tgt = onPhoto(3, 0.5, 0.5); const look = from.clone().lerp(tgt, pan);
     cam(look.clone().add(V(lerp(0.75, 0.62, push), 0.02, 0.0)).add(shake(t, 0.004)), look);
-    flash.intensity = 3.4; pov.visible = true;
+    flash.intensity = 1.8; pov.visible = true;
   } });
   // ===== 9. it's this hallway, tonight — from behind (the camera stands where the photographer stood) =====
   const s9a = s8b, s9b = L('l11').start - 0.2, matchT = ww('l10', 'you,') - 0.15;
   cue(matchT, 'whoosh', 0.35); cue(matchT + 0.3, 'creak', 0.5);
   S.push({ a: s9a, b: s9b, fade: 0.3, go: t => {
-    if (t < matchT) { flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; const tgt = onPhoto(3, 0.5, 0.5); cam(tgt.clone().add(V(0.55 - inv(s9a, matchT, t) * 0.08, 0.02, 0)).add(shake(t, 0.003)), tgt); flash.intensity = 3.2; pov.visible = false; you.root.visible = false; return; }
+    if (t < matchT) { flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; flash.castShadow = false; HL.photos.forEach(ph => ph.gl.material.opacity = 0.18); const tgt = onPhoto(3, 0.5, 0.5); cam(tgt.clone().add(V(0.55 - inv(s9a, matchT, t) * 0.08, 0.02, 0)).add(shake(t, 0.003)), tgt); flash.intensity = 3.2; pov.visible = false; you.root.visible = false; return; }
     const k = inv(matchT, s9b + 0.5, t);
     placeYou(YOU.x, 0.94, YOU.z, -90); const p = stand(t); p.head = [0, 0, 0]; you.pose(p); you.setExpr('normal'); you.setPhone('light'); you.torchT.position.set(0, -0.1, -3);
     cam(V(0.95, 1.95, lerp(7.55, 7.25, k)).add(shake(t, 0.005)), V(0.35, 1.45, 5.0));
@@ -182,12 +182,12 @@ function build() {
   // ===== 10. and it's not in this one (hold, silence) =====
   const s10a = s9b, s10b = L('l12').start - 0.2;
   cue(s10a, 'mmute', 1.6);
-  S.push({ a: s10a, b: s10b, fade: 0.35, go: t => { flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; const tgt = onPhoto(3, 0.5, 0.5); cam(tgt.clone().add(V(0.5, 0.02, 0)), tgt); flash.intensity = 3.0; pov.visible = false; } });
+  S.push({ a: s10a, b: s10b, fade: 0.35, go: t => { flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; flash.castShadow = false; HL.photos.forEach(ph => ph.gl.material.opacity = 0.18); const tgt = onPhoto(3, 0.5, 0.5); cam(tgt.clone().add(V(0.5, 0.02, 0)), tgt); flash.intensity = 3.0; pov.visible = false; } });
   // ===== 11. the reflection in the glass: the ceiling, right above you =====
   const s11a = s10b, s11b = L('l14').start - 0.2, refT = ww('l12', 'reflection.') - 0.2, aboveT = ww('l13', 'above');
   cue(refT, 'sting', 0.5); cue(L('l13').start, 'heartbeat', 0.8); cue(aboveT, 'drip', 0.7);
   S.push({ a: s11a, b: s11b, fade: 0.3, go: t => {
-    flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; const ref = ss(refT - 0.3, L('l13').start + 0.3, t), push = ss(L('l13').start, s11b, t);
+    flash.position.set(0.06, -0.07, -0.02); flashT.position.set(0, -0.05, -3); flash.angle = 0.6; flash.penumbra = 0.9; flash.castShadow = false; HL.photos.forEach(ph => ph.gl.material.opacity = 0.18); const ref = ss(refT - 0.3, L('l13').start + 0.3, t), push = ss(L('l13').start, s11b, t);
     HL.photos[3].reflM.opacity = 0.1 + ref * 0.8; HL.photos[3].pm.color.setScalar(lerp(1, 0.3, ref));
     const tgt = onPhoto(3, lerp(0.5, 0.55, push), lerp(0.5, 0.35, push)); cam(tgt.clone().add(V(lerp(0.48, 0.3, push), 0.04, 0.08)).add(shake(t, 0.003)), tgt);
     flash.intensity = lerp(3.0, 1.6, ref); pov.visible = false; sagAt(t, 1, { light: 0.9 });
@@ -209,7 +209,7 @@ function build() {
     const up = eio(inv(s13a, hitT, t)), jolt = t > hitT ? Math.exp(-(t - hitT) * 6) : 0;
     const eye = V(YOU.x, 1.62, YOU.z).add(shake(t, 0.006 + jolt * 0.02)).add(V(0, -jolt * 0.04, 0));
     const look = onPhoto(3, 0.5, 0.5).lerp(bw(0.5, 0.36), up);
-    cam(eye, look); flash.intensity = lerp(16, 4, up); pov.visible = up < 0.4; sagAt(t, 1, { jaw: 0.7, light: lerp(0.35, 0.8, up) });
+    cam(eye, look); flash.intensity = lerp(5, 2, up); pov.visible = up < 0.4; sagAt(t, 1, { jaw: 0.7, light: lerp(0.35, 0.8, up) });
   } });
   // ===== 14. its grey skin sagging like a wet sheet; its neck bent all the way back =====
   const s14a = s13b, s14b = L('l15c').start - 0.1, neckT = ww('l15b', 'neck');
@@ -226,9 +226,9 @@ function build() {
     if (t < dropCut) { const m = bw(0.5, 0.17); cam(m.clone().add(V(0.05, -0.5 + inv(s15a, dropCut, t) * 0.08, -0.12)).add(shake(t, 0.003)), m, 0, 45); flash.intensity = 1.4; pov.visible = false; sagAt(t, 1, { jaw, light: 0.8 }); return; }
     // down at the floor next to your feet: the drop lands with a wet splat
     placeYou(YOU.x, 0.94, YOU.z, -90); const p = stand(t); you.pose(p); you.setPhone('light'); you.torchT.position.set(0, 1.0, -2.0);
-    cam(V(1.3, 0.16, 4.45).add(shake(t, 0.002)), V(0.82, 0.06, 5.0), 0, 50); flash.intensity = 0; pov.visible = false;
-    const k = inv(dropT, dropT + 0.5, t); drip.visible = t > dropT && k < 1; drip.position.set(land.x, lerp(2.3, 0.012, k * k), land.z); drip.scale.set(1, 2.0, 1);
-    splash.visible = k >= 1; splash.position.copy(land); splash.scale.setScalar(Math.min(1, (t - dropT - 0.5) / 0.12) + 0.01);
+    cam(V(1.22, 0.2, 4.6).add(shake(t, 0.002)), V(0.9, 0.08, 4.95), 0, 44); flash.intensity = 0; pov.visible = false;
+    const k = inv(dropT, dropT + 0.5, t); drip.visible = t > dropT && k < 1; drip.position.set(land.x, lerp(2.3, 0.012, k * k), land.z); drip.scale.set(2.4, 4.6, 2.4);
+    splash.visible = k >= 1; splash.position.copy(land); splash.scale.setScalar(Math.min(1.3, (t - dropT - 0.5) / 0.1) + 0.01);
   } });
   // ===== 16. its pitch-black eyes don't blink; its fingers twitch one joint at a time =====
   const s16a = s15b, s16b = L('l17').start - 0.15, twT = ww('l16', 'fingers');
@@ -237,7 +237,7 @@ function build() {
   cue(ww('l16', 'blink.'), 'sting', 0.4);
   S.push({ a: s16a, b: s16b, fade: 0.2, go: t => {
     if (t < twT - 0.1) { const e = bw(0.5, 0.275), k = inv(s16a, twT, t); cam(e.clone().add(V(0.04, -0.36 + k * 0.08, 0.1)).add(shake(t, 0.002)), e, 0, 34); flash.intensity = 1.2; pov.visible = false; sagAt(t, 1, { jaw: 1.0, light: 0.8 }); return; }
-    const h = bw(0.8, 0.12); cam(h.clone().add(V(-0.12, -0.62, 0.16)).add(shake(t, 0.002)), h, 0, 44); flash.intensity = 1.2; pov.visible = false; sagAt(t, 1, { jaw: 1.0, tw: twAt(t), light: 0.8 });
+    const h = bw(0.8, 0.12); cam(h.clone().add(V(-0.12, -0.62, 0.16)).add(shake(t, 0.002)), h, 0, 44); flash.intensity = 0.35; pov.visible = false; sagAt(t, 1, { jaw: 1.0, tw: twAt(t), light: 0.8 });
   } });
   // ===== 17. it only moves when you can't see it — and your battery is at one percent =====
   const s17a = s16b, s17b = L('l18').start - 0.15, battT = ww('l17', 'battery...') - 0.3, dimT = ww('l17', 'percent.');
@@ -251,12 +251,14 @@ function build() {
   } });
   // ===== 18. two options: the front door (right under it) or the bathroom (right next to you) =====
   const s18a = s17b, s18b = L('l21').start - 0.15, aT = ww('l19', 'run'), bT = ww('l20', 'or'), lightT = ww('l20', 'light');
-  cue(ww('l18', 'two'), 'card', 0.7); cue(aT, 'pop', 0.8); cue(bT, 'pop', 0.8); cue(s18a + 0.2, 'hiss', 0.4); cue(ww('l20', 'hours.'), 'clock', 0.6);
+  cue(ww('l18', 'two'), 'card', 0.7); cue(aT, 'pop', 0.8); cue(bT, 'pop', 0.8); cue(s18a + 0.2, 'hiss', 0.4); cue(ww('l20', 'hours.') - 0.6, 'sting', 0.8); cue(ww('l20', 'hours.') - 0.6, 'hiss', 0.6);
   S.push({ a: s18a, b: s18b, fade: 0.3, go: t => {
-    const toDoor = ss(s18a + 0.3, aT + 0.4, t), toBath = ss(bT - 0.2, bT + 0.7, t);
-    const eye = V(YOU.x, 1.6, YOU.z).add(shake(t, 0.006));
-    const l0 = V(0.74, 2.2, 6.4), l1 = V(0.75, 1.25, 8.0), l2 = V(1.5, 1.05, 5.15);
-    cam(eye, l0.clone().lerp(l1, toDoor).lerp(l2, toBath), 0, 58);
+    const hoursT = ww('l20', 'hours.'), toDoor = ss(s18a + 0.3, aT + 0.4, t), toBath = ss(bT - 0.2, bT + 0.7, t), glance = ss(hoursT - 0.9, hoursT - 0.2, t);
+    const eye = V(YOU.x, 1.6, YOU.z).add(shake(t, 0.006 + glance * 0.006)).add(V(0.12 * ss(bT + 0.7, hoursT - 1.0, t), 0, 0));
+    const near = ss(bT + 0.8, hoursT - 1.0, t);   // while you look at the bathroom door it crawls closer
+    POS[2].set(0.74, 2.47, lerp(6.55, 5.95, near));
+    const l0 = V(0.74, 2.2, 6.4), l1 = V(0.75, 1.25, 8.0), l2 = V(1.5, 1.05, 5.15), l3 = V(0.72, 1.95, 5.95);
+    cam(eye, l0.clone().lerp(l1, toDoor).lerp(l2, toBath).lerp(l3, glance), 0, 58);
     sagAt(t, 2, { jaw: 1.0, side: true, light: 0.55 }); flash.intensity = 2.2 + 0.4 * Math.sin(t * 0.7); pov.visible = true;
     HL.gapM.opacity = 0.7 * ss(lightT - 0.2, lightT + 0.4, t); HL.bathL.intensity = 2.2 * ss(lightT - 0.2, lightT + 0.4, t);
   }, ui: (g, t) => { label3D(g, t, aT, s18b + 0.2, V(0.75, 1.0, 7.95), 'A', 'FRONT DOOR', '#ff3b2f'); label3D(g, t, bT + 0.3, s18b + 0.2, V(1.46, 1.25, 5.17), 'B', 'BATHROOM', '#3ea8ff'); } });
@@ -265,7 +267,7 @@ function build() {
   cue(ww('l21', 'comments.'), 'like', 0.8); cue(spotT, 'whoosh', 0.4); cue(folT, 'follow', 0.9); cue(end - 1.2, 'sting', 0.5);
   S.push({ a: s19a, b: end + 0.1, fade: 0.3, go: t => {
     const back_ = ss(spotT - 0.2, spotT + 2.0, t), settle = ss(spotT + 2.0, end - 0.05, t);
-    if (t < spotT - 0.2) { cam(V(0.95, 1.8, 3.75).add(shake(t, 0.004)), V(0.66, 1.65, 7.6), 0, 58); placeYou(YOU.x, 0.94, YOU.z, 0); const p = stand(t); p.head = [-12, 0, 0]; you.pose(p); you.setPhone('light'); you.setExpr('terror'); you.torchT.position.set(0, 0.5, -3); sagAt(t, 2, { jaw: 1.0, side: true, light: 0.5 }); flash.intensity = 0; pov.visible = false; return; }
+    if (t < spotT - 0.2) { POS[2].set(0.74, 2.47, 5.95); cam(V(0.95, 1.8, 3.75).add(shake(t, 0.004)), V(0.66, 1.65, 7.6), 0, 58); placeYou(YOU.x, 0.94, YOU.z, 0); const p = stand(t); p.head = [-12, 0, 0]; you.pose(p); you.setPhone('light'); you.setExpr('terror'); you.torchT.position.set(0, 0.5, -3); sagAt(t, 2, { jaw: 1.0, side: true, light: 0.5 }); flash.intensity = 0; pov.visible = false; return; }
     // the camera glides back down the hall to the beach photo and lands exactly on the opening frame
     const pos = V(0.9, 1.7, 4.4).lerp(OPEN.pos, back_), look = onPhoto(0, 0.65, 0.52).lerp(OPEN.look, settle);
     cam(pos.add(shake(t, 0.006)), back_ < 0.6 ? onPhoto(0, 0.75, 0.55).lerp(look, back_ / 0.6) : look);

@@ -123,7 +123,7 @@ export function buildLiving() {
   const trees = []; for (const [x, z] of [[-3.5, -6.0], [6.0, -6.2], [-0.5, -16]]) { const tr = new THREE.Group(); tr.position.set(x, -0.2, z); const tk = cyl(0.12, 0.18, 2.2, OUT(mat(0x2a1e16))); tk.position.y = 1.1; tr.add(tk); for (let k = 0; k < 5; k++) { const cr = sph(0.9, OUT(mat(0x18241c)), 1, 0.8, 1); cr.position.set(Math.sin(k * 1.3) * 0.6, 2.6 + (k % 2) * 0.5, Math.cos(k * 1.3) * 0.5); tr.add(cr); } out.add(tr); trees.push(tr); }
   const sky = new THREE.Mesh(new THREE.PlaneGeometry(70, 30), new THREE.MeshBasicMaterial({ map: skyTex() })); noOutline(sky.material); sky.position.set(1, 8, -24); out.add(sky);
   // the car
-  const car = new THREE.Group(); const cb = OUT(mat(0x2a3a5a)); car.add(box(4.2, 0.65, 1.8, cb, -2.1, 0.28, -0.9)); car.add(box(2.3, 0.55, 1.6, OUT(mat(0x22304a)), -1.2, 0.93, -0.8));
+  const car = new THREE.Group(); const cb = OUT(mat(0x1a2238)); car.add(box(4.2, 0.65, 1.8, cb, -2.1, 0.28, -0.9)); car.add(box(2.3, 0.55, 1.6, OUT(mat(0x161c2e)), -1.2, 0.93, -0.8));
   const wM = new THREE.MeshBasicMaterial({ color: 0x0a0e18 }); noOutline(wM); car.add(box(2.1, 0.45, 1.62, wM, -1.1, 0.98, -0.81));
   for (const [x, z] of [[-1.4, -0.9], [1.3, -0.9], [-1.4, 0.75], [1.3, 0.75]]) { const wh = cyl(0.32, 0.32, 0.22, OUT(mat(0x0c0c0e)), 16); wh.rotation.x = Math.PI / 2; wh.position.set(x, 0.32, z + 0.07); car.add(wh); }
   const tlM = new THREE.MeshBasicMaterial({ color: 0xff2a20 }); noOutline(tlM); for (const z of [-0.7, 0.7]) { const tl = box(0.05, 0.14, 0.32, tlM, 2.08, 0.6, z - 0.16); car.add(tl); }
