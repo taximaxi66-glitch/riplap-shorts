@@ -6,7 +6,7 @@ Channel: YouTube **RipLab (@rip_lab)**.
 ## THE look reference: Part 3 (owner: "the best result so far")
 Every new episode must LOOK and SOUND like **Part 3 – The Pale Stretcher** (`episodes/part3-pale-stretcher`, YouTube K4FWNMG-KQo): same visual style and quality. The STORY STRUCTURE is the new one below (owner, 2026-11-07), not Part 3's.
 - Before building, open and look at `reference/part3_sheet.jpg` (a frame every 0.5 s) and several `reference/part3_*.jpg` key frames.
-- Keep from the look: dark night palette with cold blue fog and contrast; living particles/light; 2.5D perspective world with comic ink outlines; continuous camera moves; close-up scare of the creature's face against glass/in darkness; same caption style; same music bed and sound density.
+- Keep from the look: dark night palette with cold blue fog and contrast; living particles/light; comic ink outlines; continuous camera moves; close-up scare of the creature's face against glass/in darkness; same caption style; same music bed and sound density.
 - Owner's favourite moment ever: the Pale Stretcher's long fingertips slowly tapping on the car window (Part 3). More of these quiet, unpleasant, tense moments in every episode.
 - After your QA sheet is rendered, compare it side by side with `reference/part3_sheet.jpg`. If yours looks flatter, greyer, emptier, less detailed or less scary, fix it before rendering.
 
@@ -28,21 +28,20 @@ Every new episode must LOOK and SOUND like **Part 3 – The Pale Stretcher** (`e
 - Every episode gets a **new, original** creature in the disturbing SCP-096 style: human-like but completely deformed (stretched limbs, wrong proportions, gaping mouth, blank or pitch-black eyes, twitching). New silhouette each time, not just the same stick limbs. Never a known franchise character (no SCP-096, Slenderman, Siren Head, etc.).
 - The creature may have one trait/clue (it hunts by sound, it can't fit through small gaps, it hates light...) so the two options are debatable with logic.
 
-## Look (3D comic look, build on the Part 3 test scene look)
-- **The world stays 3D (2.5D perspective) in every episode.** Every new set (corridor, tunnel, room, field, stairwell...) is built in the perspective world like Part 3's road: objects placed at real x/y/z positions and drawn through `proj(cam, x, y, z)`, depth fog with `fogK`, depth-sorted sprites, a moving camera (dolly, rise, tilt) with real parallax. Creatures walk through that space (feet on the ground plane, perspective size from depth). Flat side-on backdrops (`sideForest`-style layers) are only for short in-between shots (like Part 3's chase or car-door views) and must still have several parallax depth layers. At least half of the video's shots use the true perspective camera.
-- 2.5D perspective world with depth + flat comic shading and ink outlines. Dark, cold, cinematic. Single warm light sources.
+## Look (the comic look of Part 3)
+- Stay with the Part 3 engine and look (`engine/`). The owner does not want an extra focus on 3D: do NOT switch to a real-3D / three.js engine (`engine3d/`, used once for night01) and do not build scenes around 3D effects. Spend the effort on story, atmosphere and mood instead.
+- Flat comic shading and ink outlines like Part 3. Dark, cold, cinematic. Single warm light sources.
 - Every scene alive: drifting clouds, bats/birds, falling leaves, particles, swaying trees, rain with dark clouds when it fits, light rays, soft vignette, light volumetric fog that stays pleasant to look at. Never a static sky.
 - Take time for every graphic: detailed props (not two circles and a line), small background details.
 - Realistic proportions: people vs doors/cars/furniture at natural sizes; hiding places clearly recognizable.
 - Characters feel alive; the monster must be genuinely scary; the mood must fit. Slight imperfection is fine, even creepier.
 - Cause and effect always visible: things break/fall only when we see the action. Destruction animated with real splinters/shards flying (never a growing black blob).
 - Bodies move with weight (walk/run cycles with planted feet, bob, lean), hold objects correctly; never paper cut-outs sliding sideways.
-- Never show approach by just scaling a figure up: use perspective (it walks through the 3D world) or camera moves.
+- Never show approach by just scaling a figure up: let it really walk through the scene, or use camera moves.
 - No flicker: no flickering lights, strobing or random dark frames. Light changes are smooth.
 - No random automatic zooms; a camera push/zoom only where it means something (a reveal, a scream).
 - Transitions flow into each other like a living film (continuous camera moves, dissolves through fog/black, match cuts). Hard cut only on a scare beat. Never PowerPoint-style.
 - Hook in the first second: the home situation with something already wrong in frame (see Story). No spinner, no menu, no title card as the first image. A small "PART N" chip may appear later as an overlay.
-- **More real 3D (owner, 2026-11-07).** Keep the 2.5D comic look, but rooms, stairs, hallways and doors must be built as real 3D spaces (perspective boxes, floor/ceiling/walls, furniture as boxes with depth) with a camera that moves through them, including POV shots (handheld sway, looking around a corner, down the stairs). `episodes/part5-mimicker/src/desert.js` has `projPoly`, `poly3`, `box3` (near-plane clipping) and a flipped camera (`cam.flip`) to look in both directions: reuse them for interiors.
 
 ## Lessons from Parts 3-6 (self-review, 2026-11-07): what worked, what looked clunky
 Worked well (keep): big detailed face close-ups (Part 3/5/6); face pressed against glass with hands and breath (Part 5/6); fingertips tapping on the window (Part 3); perspective establishing shots with one warm light source (gas station, lighthouse beam); the split close-up (creature top, your face with eyes shut bottom); smooth dawn resolution; word-accurate captions.
