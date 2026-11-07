@@ -1,0 +1,18 @@
+{
+ "voice": "am_fenrir", "lead": 4.7, "outro": 1.5,
+ "lines": [
+  {"id":"intro",  "text":"You're home alone... when something falls over downstairs.", "speed":0.95, "gap":0.5},
+  {"id":"cough",  "text":"Then... someone coughs.", "speed":0.88, "gap":0.8},
+  {"id":"check",  "text":"You grab your phone, and go down to check.", "speed":1.0, "gap":0.4},
+  {"id":"normal", "text":"The living room looks... normal.", "speed":0.92, "gap":1.7},
+  {"id":"peek",   "text":"But something is peeking around the door frame... from the ceiling.", "speed":0.95, "gap":0.4},
+  {"id":"crawl",  "text":"It crawls toward you, upside down.", "speed":0.92, "gap":0.3},
+  {"id":"run",    "text":"You run upstairs, and lock your door.", "speed":1.05, "gap":0.5},
+  {"id":"tap",    "text":"Then it taps on your door. Softly.", "speed":0.9, "gap":0.6},
+  {"id":"fingers","text":"Its long fingers slide under the gap.", "speed":0.92, "gap":0.4},
+  {"id":"clue",   "text":"It only crawls on the ceiling, and it never looks down.", "speed":1.0, "gap":0.35},
+  {"id":"opts",   "text":"You have two options. Hide under your bed... or climb out the window, onto the roof.", "speed":1.0, "gap":0.3},
+  {"id":"what",   "text":"What do you do?", "speed":0.9, "gap":0.5},
+  {"id":"cta",    "text":"Comment A or B, and follow, so you don't miss the next night.", "speed":1.03, "gap":0.0}
+ ]
+}

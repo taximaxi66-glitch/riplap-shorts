@@ -15,7 +15,7 @@
     },
     {
         "part": 3,
-        "title": "How do you survive the Pale Stretcher? \ud83d\udc41\ufe0f Part 3",
+        "title": "How do you survive the Pale Stretcher? 👁️ Part 3",
         "monster": "The Pale Stretcher: 9 ft pale emaciated humanoid, gaping black mouth, white pinpoint eyes; attacks only if you see its face",
         "setting": "foggy forest road at night, broken-down car",
         "date": "2026-11-04",
@@ -24,7 +24,7 @@
     },
     {
         "part": 4,
-        "title": "How do you survive the Frostjaw? \ud83e\uddca Part 4",
+        "title": "How do you survive the Frostjaw? 🧊 Part 4",
         "monster": "The Frostjaw: 8 ft frostbitten, eyeless humanoid with a face split from chin to forehead (opens into needle teeth); blind, hunts by sound",
         "setting": "frozen lake at midnight, ice fishing hole, cabin on the shore",
         "date": "2026-11-05",
@@ -35,7 +35,7 @@
     },
     {
         "part": 5,
-        "title": "How do you survive the Mimicker? \ud83d\udde3\ufe0f Part 5",
+        "title": "How do you survive the Mimicker? 🗣️ Part 5",
         "monster": "The Mimicker: 9 ft grey humanoid with stringy hair, milky eyes and a jaw hanging to its chest; copies voices (your dead mom), can't come inside unless you answer",
         "setting": "empty desert gas station at 3 a.m. (canopy, pumps, convenience store)",
         "date": "2026-11-06",
@@ -46,7 +46,7 @@
     },
     {
         "part": 6,
-        "title": "How do you survive the Undertow? \ud83c\udf0a Part 6",
+        "title": "How do you survive the Undertow? 🌊 Part 6",
         "monster": "The Undertow: 10 ft drowned grey-green humanoid that crawls out of the sea bent backwards on hands and feet, head upside down (grin above milky glowing eyes, seaweed hair, barnacles); can't touch light, fast in the dark",
         "setting": "lonely lighthouse on a rocky headland at midnight (keeper's cottage, dock, lantern room)",
         "date": "2026-11-07",
@@ -54,5 +54,18 @@
         "privacy": "public",
         "source": "episodes/part6-undertow",
         "video": "videos/part6-undertow.mp4"
+    },
+    {
+        "format": "new: everyday start, slow reveal, A/B open ending, real 3D (three.js)",
+        "episode": 1,
+        "title": "Home alone and something is on the ceiling… what do you do? 😨",
+        "monster": "pale emaciated thing that crawls upside down on the ceiling, head twisted round, big black glossy eyes, grin of tiny teeth; never looks down",
+        "setting": "old, slightly run-down house at night: your bedroom, the stairs, the living room",
+        "options": "A: hide under the bed / B: climb out the window onto the roof",
+        "date": "2026-11-07",
+        "youtube": null,
+        "note": "owner uploads himself",
+        "source": "episodes/night01-ceiling (3D engine: three.js in engine3d/; symlink node_modules -> engine3d/node_modules before rendering)",
+        "video": "videos/night01-ceiling.mp4"
     }
 ]
