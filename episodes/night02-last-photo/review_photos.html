@@ -1,0 +1,6 @@
+<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:Inter;src:url(src/Inter-Black.otf);font-weight:900}body{margin:0}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js"}}</script></head><body><canvas id="c" width="1600" height="1200"></canvas>
+<script type="module">import { beachPhoto, xmasPhoto, bdayPhoto, nightPhoto } from './src/tex2.js';
+const c = document.getElementById('c'), g = c.getContext('2d'); const fs = [beachPhoto, xmasPhoto, bdayPhoto, nightPhoto];
+fs.forEach((f, i) => { const o = document.createElement('canvas'); o.width = 1600; o.height = 1200; f(o.getContext('2d'), 1600, 1200); g.drawImage(o, (i % 2) * 800, Math.floor(i / 2) * 600, 800, 600); });
+window.done = true;</script></body></html>
