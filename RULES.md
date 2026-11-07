@@ -1,24 +1,26 @@
 # RipLab horror shorts: the rules (from the channel owner)
 
-Series: **"How do you survive this horror character? Part N"**. English narration and captions, vertical 1080x1920, 30 fps, 45-58 s.
+Series: **"How do you survive this horror character? Part N"**. English narration and captions, vertical 1080x1920, 30 fps, 40-55 s.
 Channel: YouTube **RipLab (@rip_lab)**.
 
-## THE reference: Part 3 (owner: "the best result so far")
-Every new episode must look, move and sound like **Part 3 – The Pale Stretcher** (`episodes/part3-pale-stretcher`, on YouTube: K4FWNMG-KQo). Same visual style, same quality, same pacing; only the creature, the setting and the story are new.
-- Before building, open and look at `reference/part3_sheet.jpg` (a frame every 0.5 s of the whole video) and several `reference/part3_*.jpg` key frames (the number = second).
-- Match: dark night palette with cold blue fog and contrast; moon/clouds/bats/particles alive; 2.5D perspective world with comic ink outlines; the creature large and clearly readable; continuous camera moves that flow into each other; yellow RULE card; grey what-if scenes with a big red X; green "HERE'S WHAT WORKS" checklist; close-up scare of the creature's face against glass/in darkness; calm dawn resolution; CTA block (WOULD YOU HAVE SURVIVED? + heart + FOLLOW + PART N SOON); same caption style; same music bed and sound density.
+## THE look reference: Part 3 (owner: "the best result so far")
+Every new episode must LOOK and SOUND like **Part 3 – The Pale Stretcher** (`episodes/part3-pale-stretcher`, YouTube K4FWNMG-KQo): same visual style and quality. The STORY STRUCTURE is the new one below (owner, 2026-11-07), not Part 3's.
+- Before building, open and look at `reference/part3_sheet.jpg` (a frame every 0.5 s) and several `reference/part3_*.jpg` key frames.
+- Keep from the look: dark night palette with cold blue fog and contrast; living particles/light; 2.5D perspective world with comic ink outlines; continuous camera moves; close-up scare of the creature's face against glass/in darkness; same caption style; same music bed and sound density.
+- Owner's favourite moment ever: the Pale Stretcher's long fingertips slowly tapping on the car window (Part 3). More of these quiet, unpleasant, tense moments in every episode.
 - After your QA sheet is rendered, compare it side by side with `reference/part3_sheet.jpg`. If yours looks flatter, greyer, emptier, less detailed or less scary, fix it before rendering.
 
-## Story
-- A real, gripping story told to "you", with concrete scenarios and options, not a list of facts. The viewer should feel fear and root for the survivor.
-- **NO character-select spinner any more (owner, 2026-11-07).** Part 5 data: 47 % swiped away in the first second because the intro was a calm menu screen.
-- **Start in a relatable everyday situation (owner, 2026-11-07):** the opening is a moment that ANY viewer can identify with, regardless of age, gender or social role, ideally at home: a house, an apartment, a bedroom, a kitchen, a bathroom, a hallway, a front door, a stairwell. Something everyone knows (lying in bed at night, getting a glass of water in the dark kitchen, brushing teeth in the mirror, the doorbell ringing late, a phone buzzing on the nightstand). The story can get as fantastic as it wants afterwards, but the starting situation must be instantly recognizable.
-- The very first second already shows something wrong in that everyday scene (a sound, a shape, a face where it shouldn't be) with a short on-screen line, so nobody swipes away. The title question "How do you survive the <Name>?" comes after that first shock (within ~3-5 s), not as the opener.
-- Shape that works (Part 3): relatable everyday opening with an instant shock → what goes wrong → the creature appears (show it a lot) → its rule(s) on a RULE card → 2 wrong options shown as grey "what-if" scenes, each ending in a big red X → "Here's what works" with a green checklist synced to the words → the scariest close call (creature right next to you) → how you survive → CTA.
-- Darker / more brutal is fine, but no gore close-ups. Show the creature MUCH.
-- Every episode gets a **new, original** creature in the disturbing SCP-096 style: human-like but completely deformed (stretched limbs, wrong proportions, gaping mouth, blank eyes, twitching). Never reuse an old one; never use a known franchise character (no SCP-096 itself, Slenderman, Siren Head, etc.). Vary the setting too (see episodes.json for what was done).
-- Give the creature one clear, learnable weakness/rule so the survival advice is logical.
-- Call to action every time: ask to like and follow, smartly tied to the story (e.g. "Would you have survived? Follow, because part five is coming for you."), with a heart + "+ FOLLOW" button + "PART N+1 SOON" pop-ups.
+## Story (new structure, owner 2026-11-07)
+- **Universal starting situation.** Every viewer must recognise it, whatever their age, gender, job or social role. Everybody has a bed, a room, a home. NOT situations only some people know (night-shift lighthouse keeper, filling up the car at midnight, ice fishing, etc.: young viewers have never done that). Best: **you are home alone in the evening/at night** (parents out, siblings away for the weekend), lying in bed scrolling your phone.
+- **No character-select spinner.** (Part 5 data: 47 % swiped away in the first second because of the calm menu intro.) The very first second already shows the bed/room with something wrong (a sound, a shadow, a message) plus a short on-screen line.
+- **Mystery before monster.** A sound from downstairs or the next room (a voice, something falling over, a cough). You go and check. Make it disturbing and mysterious; don't let the monster simply walk into the picture (that never felt scary). Use your POV: you look into the room, at first glance everything is normal... then two disgusting dark eyes peek around the TOP corner of the door frame, unnaturally high, so it can't be a person (it would have to cling to the ceiling). Then it comes closer, the silhouette becomes clearer as it moves into the light, details appear. You run.
+- Keep and build up quiet creepy moments: fingertips tapping on glass, a face pressed against a window, breathing behind a door, a shadow in the gap under the door, a hand curling around the door frame.
+- **Open ending with two options (around 30-40 s).** No more "wrong option → red X → here's what works". Instead, at the climax: "You have two options: hide under the bed, or climb out of the window. What do you do?" Two big option cards (A / B). Both must be believable; the story gives just enough clues to argue for either. The point: viewers decide themselves, root for themselves and discuss in the comments.
+- **CTA:** ask for the comment ("Under the bed or out the window? Comment!"), plus like + follow (heart + "+ FOLLOW" + "PART N+1 SOON"). The title should also carry the question.
+- Title idea (≈ ≤ 70 chars): situation + question, e.g. "You're home alone and something is on the ceiling… what do you do? 😨 Part N".
+- Darker / more brutal is fine, but no gore close-ups. Once revealed, show the creature big and detailed.
+- Every episode gets a **new, original** creature in the disturbing SCP-096 style: human-like but completely deformed (stretched limbs, wrong proportions, gaping mouth, blank or pitch-black eyes, twitching). New silhouette each time, not just the same stick limbs. Never a known franchise character (no SCP-096, Slenderman, Siren Head, etc.).
+- The creature may have one trait/clue (it hunts by sound, it can't fit through small gaps, it hates light...) so the two options are debatable with logic.
 
 ## Look (3D comic look, build on the Part 3 test scene look)
 - **The world stays 3D (2.5D perspective) in every episode.** Every new set (corridor, tunnel, room, field, stairwell...) is built in the perspective world like Part 3's road: objects placed at real x/y/z positions and drawn through `proj(cam, x, y, z)`, depth fog with `fogK`, depth-sorted sprites, a moving camera (dolly, rise, tilt) with real parallax. Creatures walk through that space (feet on the ground plane, perspective size from depth). Flat side-on backdrops (`sideForest`-style layers) are only for short in-between shots (like Part 3's chase or car-door views) and must still have several parallax depth layers. At least half of the video's shots use the true perspective camera.
@@ -33,7 +35,20 @@ Every new episode must look, move and sound like **Part 3 – The Pale Stretcher
 - No flicker: no flickering lights, strobing or random dark frames. Light changes are smooth.
 - No random automatic zooms; a camera push/zoom only where it means something (a reveal, a scream).
 - Transitions flow into each other like a living film (continuous camera moves, dissolves through fog/black, match cuts). Hard cut only on a scare beat. Never PowerPoint-style.
-- Hook in the first second: the relatable home situation with something already wrong in frame (see Story). No spinner, no menu, no title card as the first image. A small "PART N" chip may appear later as an overlay.
+- Hook in the first second: the home situation with something already wrong in frame (see Story). No spinner, no menu, no title card as the first image. A small "PART N" chip may appear later as an overlay.
+- **More real 3D (owner, 2026-11-07).** Keep the 2.5D comic look, but rooms, stairs, hallways and doors must be built as real 3D spaces (perspective boxes, floor/ceiling/walls, furniture as boxes with depth) with a camera that moves through them, including POV shots (handheld sway, looking around a corner, down the stairs). `episodes/part5-mimicker/src/desert.js` has `projPoly`, `poly3`, `box3` (near-plane clipping) and a flipped camera (`cam.flip`) to look in both directions: reuse them for interiors.
+
+## Lessons from Parts 3-6 (self-review, 2026-11-07): what worked, what looked clunky
+Worked well (keep): big detailed face close-ups (Part 3/5/6); face pressed against glass with hands and breath (Part 5/6); fingertips tapping on the window (Part 3); perspective establishing shots with one warm light source (gas station, lighthouse beam); the split close-up (creature top, your face with eyes shut bottom); smooth dawn resolution; word-accurate captions.
+Looked bad (never again):
+- Flat side-view "what-if" scenes: everything in profile on one line, props as flat triangles/cut-outs (Part 6's rock was a grey cone; you were pasted next to it; the creature "popped" on top of it and floated, never touching the rock or the ground).
+- Interactions faked by overlap: hands pass through the car and the door just pops off (Part 5); no grip, no pull, no weight. If something is grabbed, the hand must close on a real point of the object (attach the object to the hand joint), the body must lean back and pull, then the object comes loose.
+- Floating/sliding feet: legs cycling while the body glides, feet not planted, no contact shadow. Use foot-locking: a planted foot stays at its ground point until it lifts; contact shadow under each foot; body height follows the legs.
+- Snap changes: pose/yaw jumping from walk to idle, creatures "teleporting" between poses. Blend every pose change over ≥ 0.3 s.
+- Monsters walking into frame in full view, small and in the middle distance: not scary. Reveal in parts (eyes, fingers, silhouette), then close and big.
+- All creatures built from the same thin tube limbs: they start to look alike. Give each one a different body shape (hunched mass, bloated torso, dangling skin, too many joints, crawling posture...).
+- The survivor rig looks stiff (stick arms, rigid poses, awkward sitting). Prefer close shots of hands/face/POV for the survivor, and give poses some lean, weight shift and breathing.
+- Large empty grey ground filling the lower half of wide shots: lower the camera horizon or fill the foreground (furniture, objects, floor detail).
 
 ## Text
 - Captions: smaller (Inter Black 64 px, white, black stroke), centred around y 1440, 1-3 words per chunk, each word pops exactly when spoken, one red keyword per chunk.
