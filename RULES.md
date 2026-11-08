@@ -1,6 +1,11 @@
 # RipLab horror shorts: the rules (from the channel owner)
 
-Series: **"How do you survive this horror character? Part N"**. English narration and captions, vertical 1080x1920, 30 fps, 40-55 s.
+**Standalone horror stories, NO series and NO part numbers any more (owner, 2026-11-09).** The old series "How do you survive this horror character? Part N" is over: never write "Part N" in the title, the narration, on screen or in the description, and never say "How do you survive... the <Name>?". English narration and captions, vertical 1080x1920, 30 fps, **40-55 s, never longer**.
+
+## Latest owner decision (2026-11-09): back to the Part 3 look, fast storytelling
+- "The Last Photo" (night02, real 3D in three.js, 113 s long) got almost no views. The owner: it did not look as good, and the story was told too slowly. The earlier videos did better because of the whole graphic style AND because the story was told faster.
+- So: always the 2D comic look of Part 3 with the `engine/` code (it is also much cheaper and faster to render). Never three.js / `engine3d/` / the night02 code.
+- Keep the storytelling (everyday start, mystery, reveal, two options, comment CTA), but tell it FAST: short punchy lines, a new beat every 2-3 s, no long pauses or slow photo-by-photo builds. No spinner.
 Channel: YouTube **RipLab (@rip_lab)**.
 
 ## THE look reference: Part 3 (owner: "the best result so far")
@@ -23,8 +28,8 @@ Every new episode must LOOK and SOUND like **Part 3 – The Pale Stretcher** (`e
 - **Mystery before monster.** E.g. a sound from downstairs or the next room (a voice, something falling over, a cough), or a figure far away under a streetlight. You go and check / you freeze. Make it disturbing and mysterious; don't let the monster simply walk into the picture (that never felt scary). Use your POV: you look into the room, at first glance everything is normal... then two disgusting dark eyes peek around the TOP corner of the door frame, unnaturally high, so it can't be a person (it would have to cling to the ceiling). Then it comes closer, the silhouette becomes clearer as it moves into the light, details appear. You run.
 - Keep and build up quiet creepy moments: fingertips tapping on glass, a face pressed against a window, breathing behind a door, a shadow in the gap under the door, a hand curling around the door frame.
 - **Open ending with two options (around 30-40 s).** No more "wrong option → red X → here's what works". Instead, at the climax: "You have two options: hide under the bed, or climb out of the window. What do you do?" Two big option cards (A / B). Both must be believable; the story gives just enough clues to argue for either. The point: viewers decide themselves, root for themselves and discuss in the comments.
-- **CTA:** ask for the comment ("Under the bed or out the window? Comment!"), plus like + follow (heart + "+ FOLLOW" + "PART N+1 SOON"). The title should also carry the question.
-- Title idea (≈ ≤ 70 chars): situation + question, e.g. "You're home alone and something is on the ceiling… what do you do? 😨 Part N".
+- **CTA:** ask for the comment ("Under the bed or out the window? Comment!"), plus like + follow (heart + "+ FOLLOW"), no "Part N+1". The title should also carry the question.
+- Title idea (≈ ≤ 70 chars): situation + question, e.g. "You're home alone and something is on the ceiling… what do you do? 😨" (never a part number).
 - Darker / more brutal is fine, but no gore close-ups. Once revealed, show the creature big and detailed.
 - Every episode gets a **new, original** creature in the disturbing SCP-096 style: human-like but completely deformed (stretched limbs, wrong proportions, gaping mouth, blank or pitch-black eyes, twitching). New silhouette each time, not just the same stick limbs. Never a known franchise character (no SCP-096, Slenderman, Siren Head, etc.).
 - The creature may have one trait/clue (it hunts by sound, it can't fit through small gaps, it hates light...) so the two options are debatable with logic.
@@ -44,7 +49,7 @@ Every new episode must LOOK and SOUND like **Part 3 – The Pale Stretcher** (`e
 - No flicker: no flickering lights, strobing or random dark frames. Light changes are smooth.
 - No random automatic zooms; a camera push/zoom only where it means something (a reveal, a scream).
 - Transitions flow into each other like a living film (continuous camera moves, dissolves through fog/black, match cuts). Hard cut only on a scare beat. Never PowerPoint-style.
-- Hook in the first second: the home situation with something already wrong in frame (see Story). No spinner, no menu, no title card as the first image. A small "PART N" chip may appear later as an overlay.
+- Hook in the first second: the home situation with something already wrong in frame (see Story). No spinner, no menu, no title card as the first image. No "PART N" chip.
 
 ## Lessons from Parts 3-6 (self-review, 2026-11-07): what worked, what looked clunky
 Worked well (keep): big detailed face close-ups (Part 3/5/6); face pressed against glass with hands and breath (Part 5/6); fingertips tapping on the window (Part 3); perspective establishing shots with one warm light source (gas station, lighthouse beam); the split close-up (creature top, your face with eyes shut bottom); smooth dawn resolution; word-accurate captions.
