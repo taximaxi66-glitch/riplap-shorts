@@ -1,0 +1,103 @@
+{
+ "voice": "am_fenrir",
+ "lead": 1.5,
+ "outro": 2.2,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "You're walking home alone. It's almost midnight.",
+   "speed": 1.0,
+   "gap": 0.35
+  },
+  {
+   "id": "steps",
+   "text": "Then you notice something about your footsteps.",
+   "speed": 1.02,
+   "gap": 0.25
+  },
+  {
+   "id": "many",
+   "text": "There are too many.",
+   "speed": 0.9,
+   "gap": 0.55
+  },
+  {
+   "id": "stop",
+   "text": "You stop.",
+   "speed": 0.92,
+   "gap": 0.75
+  },
+  {
+   "id": "one",
+   "text": "One more step... behind you.",
+   "speed": 0.88,
+   "gap": 0.5
+  },
+  {
+   "id": "shadow",
+   "text": "Under the streetlight, there are two shadows.",
+   "speed": 0.98,
+   "gap": 0.25
+  },
+  {
+   "id": "tall",
+   "text": "And the second one is way too tall.",
+   "speed": 0.95,
+   "gap": 0.6
+  },
+  {
+   "id": "up",
+   "text": "You look up.",
+   "speed": 0.9,
+   "gap": 0.8
+  },
+  {
+   "id": "face",
+   "text": "It's bending over you. Its face, right above yours.",
+   "speed": 0.95,
+   "gap": 0.4
+  },
+  {
+   "id": "hand",
+   "text": "Long grey fingers slowly curl over your shoulder.",
+   "speed": 0.9,
+   "gap": 0.6
+  },
+  {
+   "id": "copy",
+   "text": "It copies everything you do. When you walk, it walks. When you stop, it stops.",
+   "speed": 1.04,
+   "gap": 0.4
+  },
+  {
+   "id": "two",
+   "text": "You have two options.",
+   "speed": 1.0,
+   "gap": 0.2
+  },
+  {
+   "id": "optA",
+   "text": "Walk home, and never turn around... but it follows you to your door.",
+   "speed": 1.04,
+   "gap": 0.3
+  },
+  {
+   "id": "optB",
+   "text": "Or stand still until sunrise, with it right above you.",
+   "speed": 1.0,
+   "gap": 0.35
+  },
+  {
+   "id": "q",
+   "text": "What do you do?",
+   "speed": 0.95,
+   "gap": 0.4
+  },
+  {
+   "id": "cta",
+   "text": "Walk or stand still? Tell me in the comments, and follow for more.",
+   "speed": 1.05,
+   "gap": 0.0
+  }
+ ]
+}
