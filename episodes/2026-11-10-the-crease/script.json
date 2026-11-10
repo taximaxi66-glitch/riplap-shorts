@@ -1,0 +1,24 @@
+{
+ "voice": "am_fenrir",
+ "lead": 1.7,
+ "outro": 2.0,
+ "lines": [
+  {"id": "hook", "text": "It's two a.m. You sneak downstairs for a midnight snack.", "speed": 1.02, "gap": 0.25},
+  {"id": "quiet", "text": "Everyone's asleep. The fridge is the only light.", "speed": 1.0, "gap": 0.45},
+  {"id": "tap", "text": "Then... tap. Tap. Tap.", "speed": 0.86, "gap": 0.3},
+  {"id": "win", "text": "Something is tapping on the kitchen window.", "speed": 0.98, "gap": 0.3},
+  {"id": "branch", "text": "Just a branch? No. Those are fingers.", "speed": 0.95, "gap": 0.45},
+  {"id": "gone", "text": "Then they're gone.", "speed": 0.92, "gap": 0.6},
+  {"id": "door", "text": "Something creaks at the back door.", "speed": 0.95, "gap": 0.3},
+  {"id": "gap", "text": "And a hand slides through the gap underneath. Flat. Like paper.", "speed": 0.96, "gap": 0.4},
+  {"id": "unfold", "text": "It peels itself off the floor, and unfolds.", "speed": 0.92, "gap": 0.5},
+  {"id": "eyes", "text": "Its eyes shine in the fridge light. It only sees what's lit.", "speed": 0.98, "gap": 0.35},
+  {"id": "you", "text": "And the only light in the house is on you.", "speed": 0.95, "gap": 0.45},
+  {"id": "closer", "text": "It twitches closer.", "speed": 0.92, "gap": 0.3},
+  {"id": "two", "text": "You have two options.", "speed": 1.0, "gap": 0.2},
+  {"id": "optA", "text": "Slam the fridge shut, and freeze in total darkness.", "speed": 1.03, "gap": 0.25},
+  {"id": "optB", "text": "Or leave it open, and run for the stairs.", "speed": 1.03, "gap": 0.3},
+  {"id": "q", "text": "What do you do?", "speed": 0.95, "gap": 0.4},
+  {"id": "cta", "text": "Fridge or stairs? Tell me in the comments, and follow for more.", "speed": 1.05, "gap": 0.0}
+ ]
+}
