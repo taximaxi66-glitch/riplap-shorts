@@ -1,0 +1,24 @@
+{
+ "voice": "am_fenrir",
+ "lead": 1.5,
+ "outro": 2.0,
+ "lines": [
+  {"id": "hook", "text": "It's three a.m. Everyone's asleep. And someone rings your doorbell.", "speed": 1.0, "gap": 0.35},
+  {"id": "down", "text": "You creep downstairs.", "speed": 0.95, "gap": 0.25},
+  {"id": "glass", "text": "Through the glass... nobody's there.", "speed": 0.95, "gap": 0.35},
+  {"id": "again", "text": "Then it rings again.", "speed": 0.95, "gap": 0.3},
+  {"id": "peep", "text": "You look through the peephole. An empty porch.", "speed": 0.98, "gap": 0.3},
+  {"id": "button", "text": "But the doorbell button is still pressed down...", "speed": 0.95, "gap": 0.25},
+  {"id": "finger", "text": "by a long grey finger, reaching down from above.", "speed": 0.95, "gap": 0.6},
+  {"id": "bends", "text": "Then something bends down... and looks right back at you.", "speed": 0.9, "gap": 0.5},
+  {"id": "tall", "text": "It's twice as tall as your door. Its neck folds like an old ladder.", "speed": 1.0, "gap": 0.35},
+  {"id": "slot", "text": "The letterbox flips open.", "speed": 0.95, "gap": 0.3},
+  {"id": "feel", "text": "Long fingers slide in, feeling for you.", "speed": 0.95, "gap": 0.3},
+  {"id": "hears", "text": "It can't fit through the door. But it hears every creak.", "speed": 0.98, "gap": 0.35},
+  {"id": "two", "text": "You have two options.", "speed": 1.0, "gap": 0.2},
+  {"id": "optA", "text": "Sneak up the creaky stairs to your room...", "speed": 1.02, "gap": 0.2},
+  {"id": "optB", "text": "or stay perfectly still, right next to the door, until it leaves.", "speed": 1.04, "gap": 0.3},
+  {"id": "q", "text": "What do you do?", "speed": 0.95, "gap": 0.4},
+  {"id": "cta", "text": "Stairs or stay? Tell me in the comments, and follow for more.", "speed": 1.05, "gap": 0.0}
+ ]
+}
