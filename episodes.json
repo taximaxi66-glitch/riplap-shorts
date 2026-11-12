@@ -115,6 +115,11 @@
   "date": "2026-11-12",
   "youtube": "q3mEsGRtMXg",
   "source": "episodes/2026-11-12-the-stillgrin",
-  "video": "videos/2026-11-12-the-stillgrin.mp4"
+  "video": "videos/2026-11-12-the-stillgrin.mp4",
+  "options": [
+   "A: keep waving so the light stays on and back away to the house",
+   "B: drop the bag and sprint for the door in the dark"
+  ],
+  "privacy": "public"
  }
 ]
