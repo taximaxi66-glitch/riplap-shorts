@@ -1,0 +1,115 @@
+{
+ "voice": "am_fenrir",
+ "lead": 2.6,
+ "outro": 2.0,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "It's almost midnight. You take the trash out.",
+   "speed": 1.0,
+   "gap": 0.3
+  },
+  {
+   "id": "on",
+   "text": "The motion light on the shed clicks on.",
+   "speed": 1.0,
+   "gap": 0.25
+  },
+  {
+   "id": "still",
+   "text": "You stand still... and it clicks off.",
+   "speed": 0.95,
+   "gap": 0.45
+  },
+  {
+   "id": "again",
+   "text": "Then it clicks on again.",
+   "speed": 0.95,
+   "gap": 0.2
+  },
+  {
+   "id": "move",
+   "text": "But you didn't move.",
+   "speed": 0.9,
+   "gap": 0.55
+  },
+  {
+   "id": "taps",
+   "text": "Behind the fence... something taps.",
+   "speed": 0.92,
+   "gap": 1.0
+  },
+  {
+   "id": "curl",
+   "text": "Long grey fingers curl over the top.",
+   "speed": 0.95,
+   "gap": 0.3
+  },
+  {
+   "id": "rise",
+   "text": "Then a face rises above it. Much too high.",
+   "speed": 0.95,
+   "gap": 0.5
+  },
+  {
+   "id": "out",
+   "text": "The light goes out.",
+   "speed": 0.9,
+   "gap": 1.0
+  },
+  {
+   "id": "back",
+   "text": "When it clicks back on... it's in your garden.",
+   "speed": 0.95,
+   "gap": 0.2
+  },
+  {
+   "id": "frozen",
+   "text": "Frozen. Halfway to you.",
+   "speed": 0.92,
+   "gap": 0.3
+  },
+  {
+   "id": "dark",
+   "text": "It only moves in the dark.",
+   "speed": 0.95,
+   "gap": 0.2
+  },
+  {
+   "id": "stays",
+   "text": "And the light only stays on while something moves.",
+   "speed": 1.02,
+   "gap": 0.3
+  },
+  {
+   "id": "two",
+   "text": "You have two options.",
+   "speed": 1.0,
+   "gap": 0.15
+  },
+  {
+   "id": "optA",
+   "text": "Keep waving your arms, and back away to the house...",
+   "speed": 1.03,
+   "gap": 0.15
+  },
+  {
+   "id": "optB",
+   "text": "or drop the bag and sprint for the door, in the dark.",
+   "speed": 1.04,
+   "gap": 0.3
+  },
+  {
+   "id": "q",
+   "text": "What do you do?",
+   "speed": 0.95,
+   "gap": 0.35
+  },
+  {
+   "id": "cta",
+   "text": "Wave or sprint? Tell me in the comments, and follow for more.",
+   "speed": 1.05,
+   "gap": 0.0
+  }
+ ]
+}
